@@ -1,0 +1,96 @@
+<!-- content_begin-->
+{if name='ad_top'}
+{unless name='sitehome'}
+<div class="row">
+    <div class="col-md-12">
+        {var name='ad_top'}
+    </div>
+</div>
+{/unless}
+{/if}
+<div class="row" style="min-height:650px;">
+    {unless name='sitepage'}
+    {if name='wtk_user_level' op='==' value='3'}
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+        <h3>#MEMBER MENU#</h3>
+        <!--photo thumb -->
+        <div  style="margin:10px 0px;padding-left: 25%;">
+            <img src="{var name='siteurl'}/m_photos/thumbs/{var name='mem_photo'}" style="padding:2px;border:1px solid #CCCCCC;" alt="member photo"></div>
+        <div class="navbar-default navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#member_menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" style="padding:0px;" id="member_menu">
+            <ul class="nav nav-bar nav-stacked custom-color">
+                <li><a href="{var name='siteurl'}/home.php">My Dashboard</a></li>
+                <li><a href="{var name='siteurl'}/generate_question.php?term=task">My Task</a></li>
+                <!---<li><a href="{var name='siteurl'}/task_history.php">My Task</a></li>-->
+                <li><a href="{var name='siteurl'}/my_iq.php">My IQ <span class="badge badge-danger">6</span></a></li>
+                <li><a href="{var name='siteurl'}/smart_grid.php">Smart Grid</a></li>
+                <li><a href="{var name='siteurl'}/infinity_gridview.php">Infinity Grid</a></li>
+                <!--<li><a href="{var name='siteurl'}/wallet.php">My Accounting</a></li>-->
+                <li><a href="{var name='siteurl'}/wallet.php"> Wallet</a></li>
+                <!--<li><a href="{var name='siteurl'}/bank_transactions.php">Bank Transactions</a></li>-->
+                <li><a href="{var name='siteurl'}/mytransfer.php">E-Transfer</a></li>
+                <li><a href="{var name='siteurl'}/earnings.php">Transactions</a></li>
+                <li><a href="{var name='siteurl'}/withdraw.php">Withdraw</a></li>
+                <li><a href="{var name='siteurl'}/epin_manager.php">E-Pin</a></li>
+                <li><a href="{var name='siteurl'}/signup_new.php">Enroll A New Member</a></li>
+                 <li><a href="{var name='siteurl'}/statistics_user.php">Statistics</a></li>
+                <li><a href="{var name='siteurl'}/logout.php">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    {/if}
+    {/unless}
+    {if name='display_prod_cats'}
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+        <div class="container-fluid navbar-default" style="border-bottom: 3px solid white;">
+            <div class="navbar-default navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#product_cat">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">#CATEGORIES#</a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" style="padding:0px;" id="product_cat">
+            <ul class="sf-menu sf-vertical nav nav-bar nav-stacked custom-color">
+                {var name='prod_cats_links'} 
+            </ul>
+        </div>
+    </div>
+    {/if}
+    <div class="{if name='sitehome'}col-md-8{else}{if name='normal_page'}col-sm-12 col-md-12 col-lg-12{else}col-xs-12 col-sm-8 col-md-9 col-lg-9 {/if} {/if}">
+        {if var name='msg_err'}
+        <ul class="messages">
+            <li class="error-msg">
+                <ul>
+                    <li>
+                        <span>  {var name='msg_err'}</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        {/if}
+        {if var name='msg_ok'}
+        <ul class="messages">
+            <li class="success-msg">
+                <ul>
+                    <li>
+                        <span>{var name='msg_ok'}</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--        <div class="success">{var name='msg_ok'}</div>-->
+        {/if}
+        <!-- /content_begin-->

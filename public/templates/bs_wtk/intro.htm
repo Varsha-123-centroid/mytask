@@ -1,0 +1,41 @@
+<!--      jumbotron-->
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row hidden-xs">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!--         Indicators -->
+            <ol class="carousel-indicators">
+                <loop name="table_data">
+                    <li data-target="#carousel-example-generic" data-slide-to="{var name='count'}" class=""></li>
+                </loop>
+            </ol>
+            <!--         Wrapper for slides -->
+            <div class="carousel-inner">
+                <loop name="table_data">
+                    <div class="item {if name='count' op='==' value="0"}active{/if}">
+                         <img style="margin-left:8%" src="{var name='siteurl'}/images/{var name='banner_img'}" alt="{var name='banner_img'}"	/>
+                          </div>
+                    </loop>
+                </div>
+                <!--         Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--      /jumbotron-->
+
+
+    {if name='intro_left'}        
+    <!--TOP BLOCKS START-->
+    <!--text-->
+    <div class="row">
+        {var name='intro_left'}
+        {var name='intro_right'}
+    </div>
+    <!--  /text-->
+    <!--TOP BLOCKS END-->
+    {/if}        

@@ -1,0 +1,117 @@
+h3 {
+    border-top: 2px solid #be2c30;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    color: #be2c30;
+}
+.carousel-control.left {
+    background-image: linear-gradient(to right, rgba(201, 113, 113, 0.5) 0%,  rgba(0, 0, 0, 0.0001) 100%);
+}
+.carousel-control.right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(201, 113, 113, 0.5) 100%);
+}
+.carousel-control:hover,
+.carousel-control:focus {
+    color: #DD4814;
+}
+.custom-color>li>a{
+    background-color:#DD4814;
+    color:#FFFFFF;
+    padding: 4px 15px;
+
+}
+.pro_submenu li a{
+    background-color:#D87F60; 
+    color:#FFFFFF;
+}
+.custom-color >li>a:hover,.custom-color>li>a:focus,.pro_submenu li a:hover,.pro_submenu li a:focus{
+    background-color:#97310E;
+    color:#FFFFFF;
+    text-decoration: none;
+}
+.dropdown_ul{
+    padding-left:0px;
+    border-top: 2px solid white;
+    list-style: none;
+    width:100%;
+    height:100%;
+}
+.dropdown_ul li{
+
+    /*    height: 29px;*/
+    /*    padding: 5px 5px 5px 0 ;*/
+    border-bottom: 2px solid white;
+    width:100%;
+    height:100%;
+}
+.dropdown_ul li a{
+    background-color: #DD4814;
+    color: #FFFFFF;
+
+}
+.dropdown_ul li:last-child{
+    border-bottom:none; 
+}
+.dropdown_ul > li >a{
+    color: white;
+    padding-left: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.dropdown_ul > li > a:hover,.dropdown_ul > li > a:focus{
+    background-color:#97310E;
+    color:#FFFFFF;
+    text-decoration: none;
+}
+.dropdown_ul{
+    padding-left:0px;
+    border-top: 2px solid white;
+    list-style: none;
+}
+.dropdown_ul li{
+    border-bottom: 2px solid white;
+}
+.dropdown_ul li a{
+    background-color: #DD4814;
+    color: #FFFFFF;
+
+}
+.dropdown_ul li:last-child{
+    border-bottom:none; 
+}
+.dropdown_ul > li >a{
+    color: white;
+    padding-left: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.dropdown_ul > li > a:hover,.dropdown_ul > li > a:focus{
+    background-color:#97310e;
+    color:#ffffff;
+    text-decoration: none;
+}
+.footer{
+    color: #FFF !important; 
+
+}
+.footer a{
+    color: #FFF ;
+    text-decoration:none;
+}
+.footer a:hover{
+    color: #ffffff;
+    text-decoration:underline;
+}
+.block-heading {
+    color: #be2c30;
+    font-weight:bold;
+    border-top: 2px solid #be2c30;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.form-control_img{
+    height: 57px;
+    padding: 8px 12px;
+
+}
+.help-cust{
+    color:  #737373;
+}

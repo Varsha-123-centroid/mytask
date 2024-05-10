@@ -1,0 +1,282 @@
+<style>
+.social_media
+{
+     float: right;
+    margin-top: 6px;
+}
+.whitefont{color:#ffff !important;}
+
+.rs-sidebar-nav > li.rs-user-sidebar > a:not(:only-child):after {
+    font-size:25px;
+        color: white;
+}
+.tooltext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #0ac70e;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 80%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #0ac70e transparent transparent transparent;
+}
+</style>
+
+<script type='text/javascript'>
+function test()
+{
+window.location.href = 'wallet.php';
+}
+
+function no_referr()
+{
+document.getElementById("rs-screen-overlay").style.display = "none";
+ $('#statuswarn4').modal('show'); 
+
+}
+function photo()
+{
+window.location.href = 'cropfirst.php';
+}
+function testtt(){window.location.href = 'epin_manager.php';}
+</script>
+		<!-- BEGIN SIDEBAR NAV -->
+		<aside class="rs-sidebar fixed" style="position: relative; overflow-y: scroll;overflow-x:hidden;width: 270px; height: 100%;">
+
+			<!-- Sidebar menu -->
+			<ul class="rs-sidebar-nav default-sidebar-nav"  style="height: 100%; overflow-y: scroll;overflow-x:hidden; width: 270px;">
+				<li class="rs-user-sidebar" >
+					<a href="javascript:void(0)">
+						<span><img src="{var name='siteurl'}/{varname=mem_photo_ }" alt="User" class="avatar"></span>
+						{varname=welcome_firstname_ } {varname=welcome_lastname_ } 
+						<p class="subname text-uppercase m-t" style="color:#ffffff !important;">{var name=rank_user}</p>
+					
+<!---<span class="subname text-uppercase m-t" style="color:#ffffff !important;">ID: {var name=welcome_userid}</span>--->
+					</a>
+					
+				</li>
+
+				<li class="menu-block-divider"></li>
+				<li class="menu-header">Main menu</li>
+            
+				<li {if name='menu_active' op='==' value='home'} class="active selected" {/if}>
+					<a href="#">
+						<span class="mcon mcon-dashboard rs-icon-menu"></span>My Dashboard
+					</a>
+				</li>
+				
+		
+				
+			</ul>
+			<!-- End sidebar menu -->
+
+			
+			
+		</aside><!-- /.rs-sidebar -->
+		<!-- END SIDEBAR NAV -->
+<!-- BEGIN MAIN CONTENT -->
+ 
+		<article class="rs-content-wrapper">
+			<div class="rs-content">
+				<div class="rs-inner">
+
+					<!-- Begin Dashhead -->
+					<div class="rs-dashhead m-b-lg">
+						<div class="rs-dashhead-content">
+						<!--	<div class="rs-dashhead-titles">
+								
+								<h3 class="rs-dashhead-title m-t"> {var name=page_head}</h3>
+                                                               <br/>
+							
+								<div class="toggle-toolbar-btn">
+									<span class="fa fa-sort"></span>
+								</div>
+							
+							</div> rs-dashhead-titles -->
+							
+							<div class="rs-dashhead-titles">
+<div class="col-sm-8">
+    	<h3 class="rs-dashhead-title m-t"> {var name=page_head}</h3>
+    		<ol class="breadcrumb">
+							<li><a href="home.php"><i class="fa fa-home m-r"></i> Home</a></li>
+                                                        {var name='breadcrumb'}
+							
+							<!--<li class="active">Data</li>-->
+						</ol>
+{if name='menu_active' op='==' value='iq'}
+<div class="visible-lg">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- myiq_dsk_tophead1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="3179110805"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- myiq_dsk_tophead2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="4655844008"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{/if}
+		
+{if name='page_head' op='==' value='MY TASK'}
+
+<div class="visible-lg">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- taskhistory_dsk_top -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="4980574803"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- taskhistory_dsk_top2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="9271173603"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{/if}
+
+{if name='page_head' op='==' value='DO TASK'}
+
+<div class="visible-lg" >
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dotask_dsk_top1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="2666236809"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dotask_dsk_top2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="4142970003"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{/if}  
+
+
+{if name='page_head' op='==' value='JOB CATEGORIES'}
+<div class="visible-lg">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- selectcategory_tak_dsk_top1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="5759304000"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- selectcategory_tak_dsk_top2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="7236037206"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{/if} 
+</div>
+
+<div class="col-sm-4 socialurl">
+ {if name='shareval' op='!=' value='' }                                                        
+ {var name='web'}
+                                                         <!-- AddToAny BEGIN -->
+<div class="social_media"> 				
+				
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_whatsapp"></a>
+
+
+
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.linkmedia = "{var name='siteurl'}/templates/bs_wtk/images/taskmantra_img/avatar-large-3.png";
+a2a_config.linkname = "Hi, I am {var name='welcome_firstname'} {var name='welcome_lastname'} started working with Task Mantra, Are you ready to join digital women task force ?";
+//a2a_config.linkurl ="{var name='siteurl'}/signup_new.php?sp={var name='website_url'}";shareval
+a2a_config.linkurl ="{var name='siteurl'}/{var name='shareval'}";
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script> 
+<!-- AddToAny END -->
+
+</div>
+</div>
+{/if}
+
+
+							</div>
+							
+                                                        </div>
+						</div><!-- /.rs-dashhead-content -->
+
+                                                      
+
+
+
+
+
+
+						<!--
+						<ol class="breadcrumb">
+							<li><a href="home.php"><i class="fa fa-home m-r"></i> Home</a></li>
+                                                        {var name='breadcrumb'}
+							
+							
+						</ol>
+					 End Breadcrumb -->
+					</div><!-- /.rs-dashhead -->
+
+
+
+
+
+					<!-- End Dashhead -->
+			
+		
+<!-- Content Area -->
+
+
+	

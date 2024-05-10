@@ -1,0 +1,449 @@
+<style>
+.no-select {
+    user-select: none;
+  }
+.social_media
+{
+     float: right;
+    margin-top: 6px;
+}
+.whitefont{color:#ffff !important;}
+
+.rs-sidebar-nav > li.rs-user-sidebar > a:not(:only-child):after {
+    font-size:25px;
+        color: white;
+}
+.tooltext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #0ac70e; 
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 80%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #0ac70e transparent transparent transparent;
+}
+</style>
+
+<script type='text/javascript'>
+function test()
+{
+window.location.href = 'wallet.php';
+}
+
+function no_referr()
+{
+document.getElementById("rs-screen-overlay").style.display = "none";
+ $('#statuswarn4').modal('show'); 
+
+}
+function photo()
+{
+window.location.href = 'cropfirst.php';
+}
+function testtt(){window.location.href = 'epin_manager.php';}
+</script>
+		<!-- BEGIN SIDEBAR NAV -->
+		<aside class="rs-sidebar fixed" style="position: relative; overflow-y: scroll;overflow-x:hidden;width: 270px; height: 100%;">
+
+			<!-- Sidebar menu -->
+			<ul class="rs-sidebar-nav default-sidebar-nav"  style="height: 100%; overflow-y: scroll;overflow-x:hidden; width: 270px;">
+				<li class="rs-user-sidebar" >
+					<a href="javascript:void(0)">
+						<span><img src="{var name='siteurl'}/{varname=mem_photo }" alt="User" class="avatar"></span>
+						{varname=welcome_firstname } {varname=welcome_lastname } 
+						<p class="subname text-uppercase m-t" style="color:#ffffff !important;">{var name=rank_user}</p>
+						<i class="glyphicon glyphicon-camera" onclick="photo()"  style="margin-left: -18px;color: #fff;"></i>
+<!---<span class="subname text-uppercase m-t" style="color:#ffffff !important;">ID: {var name=welcome_userid}</span>--->
+					</a>
+					<ul>    <li style="color:#111 !important;"><a href="">ID: {var name=welcome_userid}</a></li>
+					<li style="color:#111 !important;"><a href="">Username: {var name=welcome_username}</a></li>
+						<li><a href="application_form.php">My Survey Form</a></li>
+						<li><a href="taskexam/razorpayexamsuccess.php?kyc=1">My KYC</a></li>
+						<li><a href="taskexam/updatePan.php?kyc=2">My Bank Details</a></li>
+						<li><a href="taskexam/task_support.php">My Support</a></li>
+						<li {if name='submenu_active' op='==' value='brandkit'} class="active selected" {/if}><a href="brandkit.php">My Brand Kit</a></li>
+                		<li><a href="account_settings.php">Account Settings</a></li>
+						<!--<li><a href="account_settings.php">Account Settings</a></li>-->
+						<!---<li><a href="logout.php">Author Level<span class="label label-success p-x text-uppercase">Elite</span></a></li>--->
+						<li><a href="https://task.taskmantra.com/logout.php">Log Out</a></li>
+					</ul>
+				</li>
+
+				<li class="menu-block-divider"></li>
+				<li class="menu-header">Main menu</li>
+            
+				<li {if name='menu_active' op='==' value='home'} class="active selected" {/if}>
+					<a href="{var name='siteurl'}/dashbd.php">
+						<span class="mcon mcon-dashboard rs-icon-menu"></span>My Dashboard
+					</a>
+				</li>
+				<li {if name='menu_active' op='==' value='task'} class="active selected" {/if}>
+                     <a href="{var name='siteurl'}/task_history.php?term=task">
+						<span class="mcon mcon-nature_people rs-icon-menu"></span>My Task
+					</a>
+					<ul >
+                        <li {if name='submenu_active' op='==' value='task'} class="active selected" {/if}><a href="{var name='siteurl'}/task_history.php?term=task">Do Task</a></li>
+                        
+                        
+                        
+                        <li {if name='submenu_active' op='==' value='dynamictask_history'} class="active selected" {/if} {if name='submenu_active' op='==' value='report_question_summary'} class="active selected" {/if} {if name='submenu_active' op='==' value='verify_quest_summary'} class="active selected" {/if} {if name='submenu_active' op='==' value='earn_from_question_history'} class="active selected" {/if} {if name='submenu_active' op='==' value='learnearn_history'} class="active selected" {/if} {if name='submenu_active' op='==' value='report_earn_history'} class="active selected" {/if}  {if name='submenu_active' op='==' value='verify_earn_history'} class="active selected" {/if}  {if name='submenu_active' op='==' value='generated_task'} class="active selected" {/if}{if name='submenu_active' op='==' value='task_history_clicks'} class="active selected" {/if} {if name='submenu_active' op='==' value='generated_task'} class="active selected" {/if} {if name='submenu_active' op='==' value='question_answer_history'} class="active selected" {/if}><a href="{var name='siteurl'}/dynamictask_history.php">Task History</a>	
+                            <ul>
+                                <li {if name='submenu_active' op='==' value='task_history_clicks'} class="active selected" {/if}><a href="{var name='siteurl'}/task_history_clicks.php">Fetch History</a></li>
+                                <li {if name='submenu_active' op='==' value='generated_task'} class="active selected" {/if}><a href="{var name='siteurl'}/generatedTask.php">Share & Earn History</a></li>
+				                <li {if name='submenu_active' op='==' value='dynamictask_history'} class="active selected" {/if}><a href="https://task.taskmantra.com/dynamictask_summary.php">Dynamic Task History</a></li>		
+				                <li {if name='submenu_active' op='==' value='learnearn_history'} class="active selected" {/if}><a href="https://task.taskmantra.com/learnearn_summary.php">Learn and Earn Task History</a></li>		
+				                <li {if name='submenu_active' op='==' value='question_answer_history'} class="active selected" {/if}><a href="{var name='siteurl'}/question_answer_history.php">Question & Answer History</a></li>	
+					            <!--<li {if name='submenu_active' op='==' value='verify_earn_history'} class="active selected" {/if}><a href="{var name='siteurl'}/verify_earn_history.php">Verify & Earn Task History</a></li>	-->
+					            <li {if name='submenu_active' op='==' value='report_earn_history'} class="active selected" {/if}><a href="{var name='siteurl'}/report_earn_history.php">Report & Earn Task History</a></li>		
+					            <li {if name='submenu_active' op='==' value='earn_from_question_history'} class="active selected" {/if}><a href="{var name='siteurl'}/earn_from_question_history.php">Add Questions History</a></li>		
+					            <li {if name='submenu_active' op='==' value='verify_quest_summary'} class="active selected" {/if}><a href="{var name='siteurl'}/verify_quest_summary.php">Verify Questions History</a></li>	
+					            <li {if name='submenu_active' op='==' value='report_question_summary'} class="active selected" {/if}><a href="{var name='siteurl'}/report_question_summary.php">Report Question History</a></li>	
+					         
+                            </ul>    
+                        </li>
+						
+					</ul>
+				</li>
+				<li {if name='menu_active' op='==' value='iq'} class="active selected" {/if}>
+					<a href="{var name='siteurl'}/my_iq.php"><span class="badge badge-primary" title="Daily Quiz Score">{var name='iq_badge'}</span>
+						<span class="mcon mcon-timeline  rs-icon-menu" ></span>Daily Quiz
+					</a>
+					
+				</li>
+
+				
+				<li {if name='menu_active' op='==' value='grid'} class="active selected" {/if}>
+					<a href="{var name='siteurl'}/smart_grid.php">
+						<span class="mcon mcon-streetview rs-icon-menu"></span>My Grid
+					</a>
+					<ul >
+                                                <li {if name='submenu_active' op='==' value='Smart Grid'} class="active selected" {/if}><a href="{var name='siteurl'}/a_grid.php">Smart Grid </a></li>
+                                                <li{if name='submenu_active' op='==' value='Smart Grid Explorer'} class="active selected" {/if}><a href="{var name='siteurl'}/genealogy_exp.php">Smart Grid Explorer</a></li>
+					<!--	<li {if name='submenu_active' op='==' value='Network'} class="active selected" {/if}><a href="{var name='siteurl'}/network_user.php">Network</a></li>-->
+					<!--	<li {if name='submenu_active' op='==' value='Generation Grid'} class="active selected" {/if}><a href="{var name='siteurl'}/generation_gridview.php">Generation Grid</a></li>-->
+						<li {if name='submenu_active' op='==' value='Generation Grid Explorer'} class="active selected" {/if}><a href="{var name='siteurl'}/gen_new_explore.php">Generation Grid Explorer</a></li>
+					
+					</ul>
+					
+				</li>
+				<!--<li>
+					<a href="{var name='siteurl'}/infinity_gridview.php">
+						<span class="gcon gcon-light-up rs-icon-menu"></span>My Infinity Grid
+					</a>
+					<ul>
+						<li><a href="{var name='siteurl'}/infinity_gridview.php">Infinity Grid </a></li>
+						<li><a href="{var name='siteurl'}/explorer_gridview.php">Infinity Explorer View </a></li>
+					</ul>
+					
+				</li>-->
+				
+				<li {if name='menu_active' op='==' value='wallet'} class="active selected" {/if} >
+					<a  href="javascript:void(0;">
+						<span class="fa fa-briefcase rs-icon-menu"></span>My Wallet
+					</a>
+					<ul>
+					 <!--   <li {if name='submenu_active' op='==' value='Incentive Summary'} class="active selected" {/if}><a href="{var name='siteurl'}/wallet.php"><span  class="glyphicon glyphicon-th-list  rs-icon-menu"></span>&nbsp;&nbsp;Wallet Dashboard</a></li>-->
+					    <li {if name='submenu_active' op='==' value='Incentive Summary'} class="active selected" {/if}><a href="{var name='siteurl'}/gwallet_monthly_summary.php"><span  class="glyphicon glyphicon-th-list  rs-icon-menu"></span>&nbsp;&nbsp;Incentive Summary</a></li>
+						<li {if name='submenu_active' op='==' value='My E-Transfer'} class="active selected" {/if}><a href="{var name='siteurl'}/mytransfer.php"><span class="fa fa fa-handshake-o rs-icon-menu"></span>&nbsp;&nbsp;My E-Transfer</a></li>
+					<!--  	<li {if name='submenu_active' op='==' value='My Withdraw'} class="active selected" {/if}><a href="{var name='siteurl'}/withdraw.php"><span class="fa fa fa-credit-card  rs-icon-menu"></span>&nbsp;&nbsp;My Withdraw</a></li>-->
+						<li {if name='submenu_active' op='==' value='My Payment'} class="active selected" {/if}><a href="{var name='siteurl'}/payment_info.php"><span class="fa fa fa-credit-card  rs-icon-menu"></span>&nbsp;&nbsp;My Payment</a></li>
+						<li {if name='submenu_active' op='==' value='Wallet Logout'} class="active selected" {/if}><a href="{var name='siteurl'}/wallet_logout.php"><span  class="fa fa-lock  rs-icon-menu"></span>&nbsp;&nbsp;Wallet Logout</a></li>
+					</ul>
+					
+					
+				</li>
+				
+				
+				
+				<li {if name='menu_active' op='==' value='epin'} class="active selected" {/if}>
+					<a ><span class="badge badge-primary" title="E Pin-list">{var name='epin_list'}</span>
+						<span class="mcon mcon-tune rs-icon-menu"></span>Certificate Manager
+					</a>
+					<ul>
+                    <li {if name='submenu_active' op='==' value='epin'} class="active selected" {/if}><a href="{var name='siteurl'}/my_epinnew.php"><i class='gcon gcon-attachment'></i>&nbsp;&nbsp;&nbsp;My Certificate #</a></li>
+                    <li {if name='submenu_active' op='==' value='epin_manage'} class="active selected" {/if}><a href="{var name='siteurl'}/epin_manager.php"><i class='gcon gcon-attachment'></i>&nbsp;&nbsp;&nbsp;My Team Certificates #</a></li>
+                    
+                    </ul>
+					
+				</li>
+				
+			<!--	<li {if name='menu_active' op='==' value='achievements'} class="active selected" {/if}>
+					<a href="{var name='siteurl'}/my_achievements.php">
+						<span class="gcon gcon-trophy  rs-icon-menu"></span>My Achievements
+					</a>
+					
+				</li>-->
+					<li {if name='menu_active' op='==' value='orderdetail'} class="active selected" {/if}>
+					<a href="{var name='siteurl'}/myorders.php">
+						<span class="fa fa-first-order   rs-icon-menu"></span>My Orders
+					</a>
+					
+				</li>
+			<!--	<li {if name='menu_active' op='==' value='statistics'} class="active selected" {/if}>
+					<a href="{var name='siteurl'}/network_user.php">
+						<span class="mcon mcon-multiline_chart rs-icon-menu"></span>My Statistics
+					</a>
+					
+				</li>-->
+				{if name='memstatus' op='!=' value='0'}
+                                <li> {if name='rank_user' op='!=' value='Trainee'}
+					<a href="{var name='siteurl'}/signup_new.php">
+						<span class="mcon mcon-person_add rs-icon-menu"></span>Enroll A New Member
+					</a>
+					{/if}
+					{if name='rank_user' op='==' value='Trainee'}
+					
+					<a href=# onclick="no_referr()" data-toggle="modal" >
+						<span class="fa fa-spinner rs-icon-menu"></span>Enroll A New Member
+					</a>
+					{/if}
+					
+				</li>
+				{/if}
+				<li {if name='menu_active' op='==' value='creator'} class="active selected" {/if}>
+                     <a href="{var name='siteurl'}/content_creator_signup.php">
+						<span class="fa fa-indent rs-icon-menu"></span>Become a Creator
+					</a>
+				</li>
+				<li>
+					<a href="{var name='siteurl'}/product_brand.php">
+						<span class="fa fa-shopping-bag rs-icon-menu"></span>Digital Products
+					</a>
+					
+				</li>
+				<li>
+					<a href="https://feed.taskmantra.com/shop/"  target="_blank" >
+						<span class="fa fa-shopping-cart rs-icon-menu"></span>Brand Store
+					</a>
+				</li>
+			<!--	<li>
+					<a href="https://taskmantra.freshdesk.com/"  target="_blank" >
+						<span class=" fa fa-ticket rs-icon-menu"></span>Task Mantra Support
+					</a>
+				</li>-->
+				<li>
+					<a href="https://task.taskmantra.com/logout.php">
+						<span class="fa fa-sign-out rs-icon-menu"></span>Log Out 
+					</a>
+					
+				</li>
+		
+				
+			</ul>
+			<!-- End sidebar menu -->
+
+			
+			
+		</aside><!-- /.rs-sidebar -->
+		<!-- END SIDEBAR NAV -->
+<!-- BEGIN MAIN CONTENT -->
+ 
+		<article class="rs-content-wrapper">
+			<div class="rs-content">
+				<div class="rs-inner">
+
+					<!-- Begin Dashhead -->
+					<div class="rs-dashhead m-b-lg">
+						<div class="rs-dashhead-content">
+						<!--	<div class="rs-dashhead-titles">
+								
+								<h3 class="rs-dashhead-title m-t"> {var name=page_head}</h3>
+                                                               <br/>
+							
+								<div class="toggle-toolbar-btn">
+									<span class="fa fa-sort"></span>
+								</div>
+							
+							</div> rs-dashhead-titles -->
+							
+							<div class="rs-dashhead-titles">
+<div class="col-sm-8">
+    	<h3 class="rs-dashhead-title m-t" style="color:#51b511"> {var name=page_head}</h3>
+    		<ol class="breadcrumb">
+							<li><a href="home.php"><i class="fa fa-home m-r"></i> Home</a></li>
+                                                        {var name='breadcrumb'}
+							
+							<!--<li class="active">Data</li>-->
+						</ol>
+{if name='menu_active' op='==' value='iq'}
+<div class="visible-lg">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- myiq_dsk_tophead1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="3179110805"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- myiq_dsk_tophead2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="4655844008"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{/if}
+		
+{if name='page_head' op='==' value='MY TASK'}
+
+<div class="visible-lg">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- taskhistory_dsk_top -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="4980574803"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- taskhistory_dsk_top2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="9271173603"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{/if}
+
+{if name='page_head' op='==' value='DO TASK'}
+
+<div class="visible-lg" >
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dotask_dsk_top1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="2666236809"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dotask_dsk_top2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="4142970003"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{/if}  
+
+
+{if name='page_head' op='==' value='JOB CATEGORIES'}
+<div class="visible-lg">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- selectcategory_tak_dsk_top1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="5759304000"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- selectcategory_tak_dsk_top2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9379637622939068"
+     data-ad-slot="7236037206"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{/if} 
+</div>
+
+<div class="col-sm-4 socialurl">
+ {if name='shareval' op='!=' value='' }
+ {if name='invite_frnds' op='==' value='1' }
+ {var name='web'}
+                                                         <!-- AddToAny BEGIN -->
+<div class="social_media"> 				
+				
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_whatsapp"></a>
+
+
+
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.thanks = {
+    postShare: false,
+};
+a2a_config.linkmedia = "{var name='siteurl'}/templates/bs_wtk/images/taskmantra_img/avatar-large-3.png";
+a2a_config.linkname = "Hi, I am {var name='welcome_firstname'} {var name='welcome_lastname'} started working with Task Mantra, Are you ready to join digital women task force ?";
+//a2a_config.linkurl ="{var name='siteurl'}/signup_new.php?sp={var name='website_url'}";shareval
+a2a_config.linkurl ="{var name='siteurl'}/{var name='shareval'}";
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+</div>
+</div>
+{/if}
+{/if}
+
+							</div>
+							
+                                                        </div>
+						</div><!-- /.rs-dashhead-content -->
+
+                                                      
+
+
+
+
+
+
+						<!--
+						<ol class="breadcrumb">
+							<li><a href="home.php"><i class="fa fa-home m-r"></i> Home</a></li>
+                                                        {var name='breadcrumb'}
+							
+							
+						</ol>
+					 End Breadcrumb -->
+					</div><!-- /.rs-dashhead -->
+
+
+
+
+
+					<!-- End Dashhead -->
+			
+		
+<!-- Content Area -->
+
+
+	

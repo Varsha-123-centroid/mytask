@@ -1,0 +1,139 @@
+{if name='wtk_go_back'}
+<div style="width:100%;text-align:center;">
+    [<strong><a href="{var name='wtk_go_back'}">Back</a></strong>]
+</div>
+{/if}
+</div>
+<!--CONTENT COLUMN END-->
+<!--RIGHT COLUMN START-->
+{if name='sitepage'}<!--public pages-->
+
+{if name='sitehome'}
+<div class="col-md-4 voffset-2"> 
+    <div class="row">
+        <div class="col-md-12 col-sm-4  ">
+            {if name='wtk_user_level' op='==' value='1'}
+            <script>
+                $(document).ready(function() {
+                    $('#form').bootstrapValidator({
+                        message: '#THIS VALUE IS NOT VALID#',
+                        feedbackIcons: {
+                            valid: 'glyphicon glyphicon-ok',
+                            invalid: 'glyphicon glyphicon-remove',
+                            validating: 'glyphicon glyphicon-refresh'
+                        },
+                        fields: {
+                            username: {
+                                message: '#THIS VALUE IS NOT VALID#',
+                                validators: {
+                                    notEmpty: {
+                                        message: '#USERNAME CAN NOT BE LEFT BLANK#'
+                                    }
+
+                                }
+                            },
+                            password: {
+                                message: '#THIS VALUE IS NOT VALID#',
+                                validators: {
+                                    notEmpty: {
+                                        message: '#PASSWORD CAN NOT BE LEFT BLANK#'
+                                    }
+
+                                }
+                            }
+                        }
+                    });
+                });
+            </script>
+            <h3>#DISTRIBUTOR LOGIN#</h3>
+            <form name="loginform" id="form" method="post" action="login.php" role="form">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input type="text" name="username" id="username"  class="form-control" placeholder="{var name='condition'}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"> <span class="glyphicon glyphicon-lock"></span></span>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="#PASSWORD#" maxlength="15"/>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-success btn-block" value="#LOGIN#"/>
+            </form>
+            <div class="help-block"><a href="forgot_password.php">#FORGOT PSWD#?</a></div>
+            <div class="help-block"><a href="signup.php">#NEW USER#? #CREATE AN ACCOUNT#</a></div>
+            {if name='allow_facebook_login'}
+            <!--            <img src="{var name='siteurl'}/facebook/images/fblogin1.png"  onclick="document.location = '{var name='siteurl'}/facebook/facebook_login.php'" style="cursor:pointer;"/>-->
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="fa fa-facebook fa-lg"></i>
+                    </span>
+                    <input type="button" name="username" value="#LOGIN VIA FACEBOOK#" class="form-control btn btn-facebook" onclick="document.location = '{var name='siteurl'}/facebook/facebook_login.php'">
+                </div>
+            </div>
+
+
+            {/if}
+        </div>
+        {/unless}
+        {/if}
+        {if name='sitehome'}
+        {if name='ad_home'}
+        <div class="col-md-12 col-sm-4">
+            {var name='ad_home'}
+        </div>
+        {/if}
+        {else}
+        {if name='ad_right'}
+        <div class="moduletable" style="margin-top:10px;">
+            {var name='ad_right'}
+        </div>
+        {/if}
+        {/if}
+        {if name='sitehome'}
+        {if name='site_news'}
+        <div class="col-md-12 col-sm-4 voffset-md-2">
+            <h3>#ANNOUNCEMENTS#:</h3>
+            <marquee class="form-control marquee_border" scrollamount="2" direction="up" loop="true" height="80" onmouseover="stop()" onmouseout="start()">{var name='site_news'}</marquee>
+        </div>
+        {/if}
+        <div class="col-md-12 col-sm-4">
+            <h3>#NEWSLETTER#:</h3>
+            <script>
+                function submit_form() {
+                    try {
+                        if (document.getElementById('newsletter_input').value == '' || document.getElementById('newsletter_input').value == '#ENTER YOUR EMAIL HERE#') {
+                            bootbox.alert('#ENTER EMAIL#');
+                        } else if (document.getElementById('newsletter_input').value.search(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i) == -1) {
+                            bootbox.alert('#ENTER VALID EMAIL ADDESS#')
+                        } else {
+                            makeGetRequest('?command=subscribe&param1=' + document.getElementById('newsletter_input').value, 1)
+                        }
+                    } catch (err) {
+                        bootbox.alert('#THE FROM NOT BE SUBMITTED#' + err);
+                        return false;
+                    }
+                }
+            </script>
+            <div class="input-group">
+                <input class="form-control" id="newsletter_input" type="text" name="newsletter_email" size="15" placeholder='#ENTER YOUR EMAIL HERE#'/>             
+                <span class="input-group-btn">
+                    <input class="btn btn-success" type="submit" value="#SUBSCRIBE#" name="Submit" onclick="submit_form();"/>
+                </span>
+            </div><!-- /input-group -->
+            <br /><br />
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+{/if}
+<!-- RIGHT POSITION -->
+
+{/if}
+<!--RIGHT COLUMN END-->
+
+</div><!--class="row" ends-->

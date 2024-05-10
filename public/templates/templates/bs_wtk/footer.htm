@@ -1,0 +1,75 @@
+		
+                
+			</div><!-- /.rs-content -->
+		</article><!-- /.rs-content-wrapper -->
+		<!-- END MAIN CONTENT -->
+
+
+		<!-- BEGIN FOOTER -->
+		<footer class="rs-footer absolute-footer">
+			<span class="text-muted small"> <a href="{var name='siteurl'}">Task Mantra Pvt. Ltd. © 2023 </a>| All rights are reserved [Beta Version]</span>
+		</footer>
+		<!-- END FOOTER -->
+
+
+	</div><!-- /#rs-wrapper -->
+
+	<!-- Screen overlay is required -->
+	<div id="rs-screen-overlay"></div>
+
+
+	
+	
+
+
+
+
+</body>
+
+
+<div class="modal fade" id="statuswarn4"  role="dialog">
+    <div class="modal-dialog ">
+ 
+      <div class="modal-content modal-color">
+        <div class="modal-header  bg-primary borderless" >
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title ">Message From www.taskmantra.com</h4>
+        </div>
+        <div class="modal-body">
+         Achieve Rank Introducer to begin your Referrals.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default " data-dismiss="modal" onclick="screen()">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script>
+  
+  $("#loader").fadeTo(5000,1).fadeOut(1000);
+  
+  
+ function screen()
+ {
+ document.getElementById("rs-screen-overlay").style.display = "block";
+ }
+function CopyLink() {
+  /* Get the text field */
+  var copyText = document.getElementById("invitaion_link");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+  
+  /* Alert the copied text */
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied";
+  
+}
+
+ </script>
+</html>
